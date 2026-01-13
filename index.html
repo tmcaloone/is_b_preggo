@@ -36,10 +36,38 @@
         .no {
             color: #ef4444;
         }
+        .message {
+            font-size: 1.5rem;
+            color: #888;
+            margin-top: 2rem;
+            text-align: center;
+            max-width: 600px;
+            padding: 0 1rem;
+        }
     </style>
 </head>
 <body>
     <h1>Is B still pregnant?</h1>
     <div class="answer yes">Yes</div>
+    <div class="message" id="message"></div>
+
+    <script>
+        const messages = [
+            "Put the kettle on and check back in a bit.",
+            "Any day now... or so they keep saying.",
+            "Still cooking. Check back later.",
+            "The baby is on their own schedule.",
+            "Patience, young grasshopper.",
+            "Have you tried asking the baby nicely?",
+            "Plot twist: babies don't have calendars.",
+            "Due dates are more like suggestions, apparently.",
+            "Still in there, living rent-free.",
+            "The wait continues. Deep breaths.",
+            "Maybe go for a walk and check back?",
+            "Fun fact: only 5% of babies arrive on their due date."
+        ];
+        document.getElementById('message').textContent =
+            messages[Math.floor(Math.random() * messages.length)];
+    </script>
 </body>
 </html>
